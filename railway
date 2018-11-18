@@ -9,14 +9,14 @@ def findPlatform(arrival, departure, n):
     i = 1
     j = 0  
     while (i < n and j < n): 
-    	if (arrival[i] < departure[j]):
-        platforms_needed+=1
-        i+=1
-        if (platforms_needed > result):  
-            answer = platforms_needed 
-   	  else: 
-        platforms_needed-=1
-        j+=1
+        if (arrival[i] < departure[j]):
+            platforms_needed+=1
+            i+=1
+            if (platforms_needed > result):  
+                answer = platforms_needed 
+        else: 
+            platforms_needed-=1
+            j+=1
     return answer 
   
 # from railway timetable   
