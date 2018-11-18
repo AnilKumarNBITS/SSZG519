@@ -1,0 +1,26 @@
+def findPlatform(arrival, departure, n): 
+    # Sort arrival and departure arrays 
+    arrival.sort() 
+    departure.sort() 
+   
+    # platforms_needed indicates number of platforms needed at a time 
+    platforms_needed = 1
+    result = 1
+    i = 1
+    j = 0  
+    while (i < n and j < n): 
+    	if (arrival[i] < departure[j]):
+        platforms_needed+=1
+        i+=1
+        if (platforms_needed > result):  
+            answer = platforms_needed 
+   	  else: 
+        platforms_needed-=1
+        j+=1
+    return answer 
+  
+# from railway timetable   
+arrival = [0900, 0915, 1030, 1045] 
+departure = [0930, 1100, 1145, 1300] 
+n = len(arrival)  
+print("Minimum Number of Platforms Required = ", findPlatform(arrival, departure, n))
