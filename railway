@@ -20,7 +20,7 @@ def findPlatform(arrival, departure, n):
     return answer 
   
 # from railway timetable   
-arrival = [0900, 0915, 1030, 1045] 
-departure = [0930, 1100, 1145, 1300] 
+arrival = [900, 915, 1030, 1045] 
+departure = [930, 1100, 1145, 1300] 
 n = len(arrival)  
 print("Minimum Number of Platforms Required = ", findPlatform(arrival, departure, n))
